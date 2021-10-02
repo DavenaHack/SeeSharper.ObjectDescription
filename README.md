@@ -1,0 +1,7 @@
+# SeeShraper ObjectDescription [![build and test](https://img.shields.io/github/workflow/status/DavenaHack/SeeSharper.ObjectDescription/build%20and%20test?label=build%20and%20test&logo=github)](https://github.com/DavenaHack/SeeSharper.ObjectDescription/actions/workflows/BuildAndTest.yml) [![NuGet Mimp.SeeSharper.ObjectDescription.Abstraction](https://img.shields.io/nuget/v/Mimp.SeeSharper.ObjectDescription.Abstraction?label=Mimp.SeeSharper.ObjectDescription.Abstraction&logo=nuget)](https://www.nuget.org/packages/Mimp.SeeSharper.ObjectDescription.Abstraction/) [![NuGet Mimp.SeeSharper.ObjectDescription](https://img.shields.io/nuget/v/Mimp.SeeSharper.ObjectDescription?label=Mimp.SeeSharper.ObjectDescription&logo=nuget)](https://www.nuget.org/packages/Mimp.SeeSharper.ObjectDescription/) [![NuGet Mimp.SeeSharper.ObjectDescription.TypeResolver](https://img.shields.io/nuget/v/Mimp.SeeSharper.ObjectDescription.Extensions.Configuration?label=Mimp.SeeSharper.ObjectDescription.Extensions.Configuration&logo=nuget)](https://www.nuget.org/packages/Mimp.SeeSharper.ObjectDescription.Extensions.Configuration/)
+
+*SeeSharper Object Description* is a component from the framework *[SeeSharper](https://github.com/DavenaHack/SeeSharper)*. *SeeSharper Object Description* is a abstraction to represent objects.
+
+
+## License
+Like *SeeSharper*, *SeeSharper Object Description* is under the [MIT license](https://github.com/DavenaHack/SeeSharper.ObjectDescription/blob/master/LICENSE), too.
