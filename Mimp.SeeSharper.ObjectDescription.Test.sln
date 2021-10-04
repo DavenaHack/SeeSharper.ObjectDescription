@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mimp.SeeSharper.ObjectDescription.Test", "test\Mimp.SeeSharper.ObjectDescription.Test\Mimp.SeeSharper.ObjectDescription.Test.csproj", "{62BED0B8-A4D6-453B-888D-C0F78F7AC152}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{EB388ABB-C97F-4DCF-95C5-7FDEF83B4D43}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mimp.SeeSharper.ObjectDescription.Abstraction", "src\Mimp.SeeSharper.ObjectDescription.Abstraction\Mimp.SeeSharper.ObjectDescription.Abstraction.csproj", "{5BA07EFC-EA98-4F95-9F3A-D6A3527F42DD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mimp.SeeSharper.ObjectDescription", "src\Mimp.SeeSharper.ObjectDescription\Mimp.SeeSharper.ObjectDescription.csproj", "{3B9425D1-5815-4EBD-868E-21C716B8C069}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mimp.SeeSharper.ObjectDescription.Extensions.Configuration", "src\Mimp.SeeSharper.ObjectDescription.Extensions.Configuration\Mimp.SeeSharper.ObjectDescription.Extensions.Configuration.csproj", "{F649770A-A33B-446E-BC2F-219D4A90AF1B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{62BED0B8-A4D6-453B-888D-C0F78F7AC152}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62BED0B8-A4D6-453B-888D-C0F78F7AC152}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62BED0B8-A4D6-453B-888D-C0F78F7AC152}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62BED0B8-A4D6-453B-888D-C0F78F7AC152}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BA07EFC-EA98-4F95-9F3A-D6A3527F42DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BA07EFC-EA98-4F95-9F3A-D6A3527F42DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BA07EFC-EA98-4F95-9F3A-D6A3527F42DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BA07EFC-EA98-4F95-9F3A-D6A3527F42DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B9425D1-5815-4EBD-868E-21C716B8C069}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B9425D1-5815-4EBD-868E-21C716B8C069}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B9425D1-5815-4EBD-868E-21C716B8C069}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B9425D1-5815-4EBD-868E-21C716B8C069}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F649770A-A33B-446E-BC2F-219D4A90AF1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F649770A-A33B-446E-BC2F-219D4A90AF1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F649770A-A33B-446E-BC2F-219D4A90AF1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F649770A-A33B-446E-BC2F-219D4A90AF1B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5BA07EFC-EA98-4F95-9F3A-D6A3527F42DD} = {EB388ABB-C97F-4DCF-95C5-7FDEF83B4D43}
+		{3B9425D1-5815-4EBD-868E-21C716B8C069} = {EB388ABB-C97F-4DCF-95C5-7FDEF83B4D43}
+		{F649770A-A33B-446E-BC2F-219D4A90AF1B} = {EB388ABB-C97F-4DCF-95C5-7FDEF83B4D43}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4D6D6B59-ED6A-44C1-BEFA-815EFC23F582}
+	EndGlobalSection
+EndGlobal

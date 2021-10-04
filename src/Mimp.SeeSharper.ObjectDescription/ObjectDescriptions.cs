@@ -49,17 +49,17 @@ namespace Mimp.SeeSharper.ObjectDescription
                 {
                     var pairB = pairBs.First();
                     valuesB.Remove(pairB);
-                    if (!Equals(pairA.Value, pairB.Value))
+                    if (!Equals(pairA.Value, pairB.Value, valueEquals))
                         return false;
                 }
                 else
                 {
-                    if (!Equals(pairA.Value, NullDescription))
+                    if (!Equals(pairA.Value, NullDescription, valueEquals))
                         return false;
                 }
             }
             foreach (var pairB in valuesB)
-                if (!Equals(NullDescription, pairB.Value))
+                if (!Equals(NullDescription, pairB.Value, valueEquals))
                     return false;
 
             return true;
