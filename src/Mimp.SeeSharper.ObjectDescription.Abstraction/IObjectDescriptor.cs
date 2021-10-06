@@ -6,6 +6,8 @@ namespace Mimp.SeeSharper.ObjectDescription.Abstraction
     {
 
 
+        public bool Describable(Type type, object? instance);
+
         public IObjectDescription Describe(Type type, object? instance);
 
 

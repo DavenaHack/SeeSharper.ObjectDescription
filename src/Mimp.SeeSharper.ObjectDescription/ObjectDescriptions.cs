@@ -1,17 +1,36 @@
-﻿using Mimp.SeeSharper.ObjectDescription.Abstraction;
-using System;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
-namespace Mimp.SeeSharper.ObjectDescription
+namespace Mimp.SeeSharper.ObjectDescription.Abstraction
 {
-    public class ObjectDescriptions
+    public static class ObjectDescriptions
     {
 
 
         public static string? ValueKey => null;
 
         public static IObjectDescription NullDescription { get; }
-            = new ObjectDescription((object?)null);
+            = Constant((object?)null);
+
+        public static IObjectDescription EmptyDescription { get; }
+            = new ConstantObjectDescription(Array.Empty<KeyValuePair<string?, IObjectDescription>>());
+
+
+        public static IObjectDescription Constant(object? value) =>
+            new ConstantObjectDescription(value);
+
+        public static IObjectDescription Constant(IEnumerable<KeyValuePair<string?, IObjectDescription>> children) =>
+            new ConstantObjectDescription(children ?? throw new ArgumentNullException(nameof(children)));
+
+        public static IObjectDescription Constant(KeyValuePair<string?, IObjectDescription> descriptionPair) =>
+            Constant(new[] { descriptionPair });
+
+        public static IObjectDescription Constant(string? key, IObjectDescription description) =>
+            Constant(new KeyValuePair<string?, IObjectDescription>(key, description));
+
+        public static IObjectDescription Constant(string? key, object? value) =>
+            Constant(key, Constant(value));
 
 
         public static bool Equals(IObjectDescription descA, IObjectDescription descB) =>
@@ -39,8 +58,8 @@ namespace Mimp.SeeSharper.ObjectDescription
             if (descA.HasValue)
                 return valueEquals(descA.Value, descB.Value);
 
-            var valuesA = descA.Children!.ToList();
-            var valuesB = descB.Children!.ToList();
+            var valuesA = descA.Children.ToList();
+            var valuesB = descB.Children.ToList();
 
             foreach (var pairA in valuesA)
             {

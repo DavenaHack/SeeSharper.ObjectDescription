@@ -28,6 +28,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="ve-C0F6.tmp" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Mimp.SeeSharper.ObjectDescription.Abstraction\Mimp.SeeSharper.ObjectDescription.Abstraction.csproj" />
   </ItemGroup>
 
