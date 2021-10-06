@@ -12,12 +12,12 @@ namespace Mimp.SeeSharper.ObjectDescription.Test
         {
 
             Assert.IsTrue(ObjectDescriptions.EqualsValuesToString(
-                new ObjectDescription(new List<KeyValuePair<string?, IObjectDescription>> {
-                    new KeyValuePair<string?, IObjectDescription>( "Value1", new ObjectDescription(1)),
+                ObjectDescriptions.Constant(new List<KeyValuePair<string?, IObjectDescription>> {
+                    new KeyValuePair<string?, IObjectDescription>("Value1", ObjectDescriptions.Constant(1)),
                     new KeyValuePair<string?, IObjectDescription>("Value2", ObjectDescriptions.NullDescription)
-                }), new ObjectDescription(new List<KeyValuePair<string?, IObjectDescription>> {
-                    new KeyValuePair<string?, IObjectDescription>( "Value1", new ObjectDescription("1") ),
-                    new KeyValuePair<string?, IObjectDescription>(  "Value3", new ObjectDescription((object?)null) )
+                }), ObjectDescriptions.Constant(new List<KeyValuePair<string?, IObjectDescription>> {
+                    new KeyValuePair<string?, IObjectDescription>("Value1", ObjectDescriptions.Constant("1") ),
+                    new KeyValuePair<string?, IObjectDescription>("Value3", ObjectDescriptions.Constant((object?)null) )
                 })));
 
         }
