@@ -15,10 +15,12 @@ namespace Mimp.SeeSharper.ObjectDescription.Extensions.Configuration
 
         public bool HasValue => Configuration is IConfigurationSection s && s.Value is not null;
 
-        public object? Value => (Configuration as IConfigurationSection)?.Value;
+        public object? Value => HasValue ? ((IConfigurationSection)Configuration).Value
+            : throw ObjectDescribeException.GetNonValueDescriptionException(this);
 
-        public IEnumerable<KeyValuePair<string?, IObjectDescription>>? Children => HasValue ? null
-            : Configuration.GetChildren().Select(c => new KeyValuePair<string?, IObjectDescription>(c.Key, new ConfigurationObjectDescription(c)));
+        public IEnumerable<KeyValuePair<string?, IObjectDescription>> Children => !HasValue ?
+            Configuration.GetChildren().Select(c => new KeyValuePair<string?, IObjectDescription>(c.Key, new ConfigurationObjectDescription(c)))
+            : throw ObjectDescribeException.GetValueDescriptionException(this);
 
 
         public ConfigurationObjectDescription(IConfiguration configuration)
