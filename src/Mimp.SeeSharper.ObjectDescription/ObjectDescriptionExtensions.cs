@@ -92,7 +92,7 @@ namespace Mimp.SeeSharper.ObjectDescription
             if (!description.IsWrappedValue())
                 throw new ObjectDescribeException($"Can't unwrap description: {description}");
 
-            return ObjectDescriptions.Constant(description.Children.First().Value);
+            return ObjectDescriptions.Constant(description.Children.First().Value.Value);
         }
 
 
@@ -224,6 +224,9 @@ namespace Mimp.SeeSharper.ObjectDescription
         public static IObjectDescription Append(this IObjectDescription head, string? key, object? value) =>
             head.Append(key, ObjectDescriptions.Constant(value));
 
+        public static IObjectDescription Append(this IObjectDescription head, object? value) =>
+            head.Append(ObjectDescriptions.ValueKey, value);
+
 
         public static IObjectDescription Prepend(this IObjectDescription tail, KeyValuePair<string?, IObjectDescription> descriptionPair)
         {
@@ -238,6 +241,9 @@ namespace Mimp.SeeSharper.ObjectDescription
 
         public static IObjectDescription Prepend(this IObjectDescription tail, string? key, object? value) =>
             tail.Prepend(key, ObjectDescriptions.Constant(value));
+
+        public static IObjectDescription Prepend(this IObjectDescription head, object? value) =>
+            head.Prepend(ObjectDescriptions.ValueKey, value);
 
 
     }

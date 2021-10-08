@@ -1,8 +1,9 @@
-﻿using System;
+﻿using Mimp.SeeSharper.ObjectDescription.Abstraction;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Mimp.SeeSharper.ObjectDescription.Abstraction
+namespace Mimp.SeeSharper.ObjectDescription
 {
     public static class ObjectDescriptions
     {
