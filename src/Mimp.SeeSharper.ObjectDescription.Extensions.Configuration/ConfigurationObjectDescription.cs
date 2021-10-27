@@ -29,5 +29,9 @@ namespace Mimp.SeeSharper.ObjectDescription.Extensions.Configuration
         }
 
 
+        public override string? ToString() =>
+            this.Constant(true).ToString();
+
+
     }
 }

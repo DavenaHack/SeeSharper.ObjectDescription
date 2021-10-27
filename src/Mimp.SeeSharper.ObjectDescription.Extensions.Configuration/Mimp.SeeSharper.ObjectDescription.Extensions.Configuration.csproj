@@ -33,6 +33,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Mimp.SeeSharper.ObjectDescription.Abstraction\Mimp.SeeSharper.ObjectDescription.Abstraction.csproj" />
+    <ProjectReference Include="..\Mimp.SeeSharper.ObjectDescription\Mimp.SeeSharper.ObjectDescription.csproj" />
   </ItemGroup>
 
 </Project>
